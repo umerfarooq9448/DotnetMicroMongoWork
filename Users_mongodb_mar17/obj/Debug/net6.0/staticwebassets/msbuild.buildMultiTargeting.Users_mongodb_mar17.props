@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Users_mongodb_mar17.props" />
+</Project>

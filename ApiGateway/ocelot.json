@@ -1,0 +1,60 @@
+﻿{
+  "Routes": [
+
+    {
+      "DownstreamPathTemplate": "/api/Products",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7250
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/product", //these code is to configure the gateway
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      
+    },
+    {
+      "DownstreamPathTemplate": "/api/Products/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7250
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/product/{id}", //these code is to configure the gateway
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "SwaggerKey": "contacts"
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/api/User",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7122
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/User", //these code is to configure the gateway
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "SwaggerKey": "contacts"
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7122
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/User/{id}", //these code is to configure the gateway
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "SwaggerKey": "contacts"
+    }
+
+
+}
